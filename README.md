@@ -16,10 +16,10 @@ The operation is simple, everything is about `data-attributes`, since its cool t
 identifi.js needs Jquery to work (for some actions related to the DOM).
 
 So basically, your document will look like this :
-
-  &lt;script type="text/javascrip" src="jquery.min.js"></script>
-  &lt;script type="text/javascrip" src="identifi.min.js"></script>
-
+```
+  <script type="text/javascrip" src="jquery.min.js"></script>
+  <script type="text/javascrip" src="identifi.min.js"></script>
+```
 ### Insert an image :
 To start, pick an image, and insert it into your page :
     `<img src="path/to/my/image.png" />`
