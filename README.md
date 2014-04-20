@@ -1,5 +1,5 @@
 # identifi.js
-
+[![Gitter chat](https://badges.gitter.im/LukyVj/identifi.js.png)](https://gitter.im/LukyVj/identifi.js)
 identifi.js is an open project, which aims to make the people identification easier on pictures.
 
 ## The idea :
