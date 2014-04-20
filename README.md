@@ -62,6 +62,9 @@ Now, save, and hover your picture ! Thats it !
 ### Thanks to :
 * [@Dervondenbergen](https://github.com/dervondenbergen)
 
+### You want to contribute or chat about the project ? :
+[We're on gitter !](ttps://gitter.im/LukyVj/identifi.js)
+
 # Demo :
 <p data-height="268" data-theme-id="294" data-slug-hash="iFhdz" data-default-tab="result" class='codepen'>See the Pen <a href='http://codepen.io/LukyVj/pen/iFhdz/'>identifi.js Demo</a> by LukyVJ (<a href='http://codepen.io/LukyVj'>@LukyVj</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
 <script async src="http://codepen.io/assets/embed/ei.js"></script>
