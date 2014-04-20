@@ -17,8 +17,8 @@ identifi.js needs Jquery to work (for some actions related to the DOM).
 
 So basically, your document will look like this :
 
-  <script type="text/javascrip" src="jquery.min.js"></script>
-  <script type="text/javascrip" src="identifi.min.js"></script>
+  &lt;script type="text/javascrip" src="jquery.min.js"></script>
+  &lt;script type="text/javascrip" src="identifi.min.js"></script>
 
 ### Insert an image :
 To start, pick an image, and insert it into your page :
