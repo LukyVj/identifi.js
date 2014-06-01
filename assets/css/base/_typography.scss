@@ -16,7 +16,10 @@ $font-directory: $font-path + $font-name;
 }
 
 body{
-        *{font-family: $font-name;}
+    h1,h2,h3,h4,h5,h6{font-family: $font-name;}
+    p{
+        font-family: Helvetica;
+    }
 }
 /* Typographic media queries */
 @media all and (max-width: 40em) {

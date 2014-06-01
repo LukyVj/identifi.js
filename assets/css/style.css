@@ -173,8 +173,10 @@ td, th {
 @font-face {
   font-family: "SourceSerifPro-Regular";
   src: url("../fonts/SourceSerifPro-Regular/SourceSerifPro-Regular.eot?") format("eot"), url("../fonts/SourceSerifPro-Regular/SourceSerifPro-Regular.otf.woff") format("woff"), url("../fonts/SourceSerifPro-Regular/SourceSerifPro-Regular.svg#SourceSerifPro-Regular") format("svg"), url("../fonts/SourceSerifPro-Regular/SourceSerifPro-Regular.ttf") format("truetype"); }
-body * {
+body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: "SourceSerifPro-Regular"; }
+body p {
+  font-family: Helvetica; }
 
 /* Typographic media queries */
 @media all and (max-width: 40em) {
@@ -255,7 +257,7 @@ html, body {
   font-family: "SourceSerifPro-Regular", Helvetica, Helvetica Neue sans-serif; }
 
 html {
-  font-size: 1rem;
+  font-size: 1.1rem;
   overflow-x: hidden; }
 
 /* ====================================================================================================
@@ -276,7 +278,7 @@ button[type="button"] {
   background: transparent;
   border: 0;
   color: #fff;
-  line-height: 3.5; }
+  line-height: 2.7; }
   button[type="button"] ul li a {
     color: #7f8c8d; }
 
@@ -336,6 +338,84 @@ Animations : Define CSS3 keyframes animations
 /* ==========================================================================
  Main style of your project  :
  ========================================================================== */
+.github--ribbon {
+  position: fixed;
+  width: 10em;
+  height: 10em;
+  background: #bdc3c7;
+  -webkit-transform: rotate(-45deg) translateY(-5em) translateX(-5em) scale(1);
+  -moz-transform: rotate(-45deg) translateY(-5em) translateX(-5em) scale(1);
+  -ms-transform: rotate(-45deg) translateY(-5em) translateX(-5em) scale(1);
+  -o-transform: rotate(-45deg) translateY(-5em) translateX(-5em) scale(1);
+  transform: rotate(-45deg) translateY(-5em) translateX(-5em) scale(1);
+  box-shadow: inset 0 0 2em rgba(0, 0, 0, 0.2);
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+  overflow: hidden;
+  text-decoration: none;
+  z-index: 9999; }
+  .github--ribbon span {
+    margin: 2.6em 1.5em;
+    font-size: 2.5em;
+    display: block;
+    color: #fff;
+    opacity: .8;
+    -webkit-transition: opacity 0.2s ease, -webkit-transform 0.4s ease;
+    -moz-transition: opacity 0.2s ease, -moz-transform 0.4s ease;
+    transition: opacity 0.2s ease, transform 0.4s ease; }
+  .github--ribbon:hover a {
+    text-decoration: none !important; }
+    .github--ribbon:hover a span {
+      opacity: 1;
+      text-decoration: none !important; }
+  .github--ribbon[class*="top-"] {
+    top: 0; }
+  .github--ribbon[class*="bottom-"] {
+    bottom: -10em; }
+    .github--ribbon[class*="bottom-"] span {
+      margin-top: .5em;
+      margin: .4em 1.6em;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg); }
+  .github--ribbon[class*="-left"] {
+    left: 0; }
+  .github--ribbon[class*="-right"] {
+    right: -10em; }
+  .github--ribbon[class*="top--right"] span {
+    -webkit-transform: rotate(90deg) translateY(1em);
+    -moz-transform: rotate(90deg) translateY(1em);
+    -ms-transform: rotate(90deg) translateY(1em);
+    -o-transform: rotate(90deg) translateY(1em);
+    transform: rotate(90deg) translateY(1em);
+    margin: 1.5em 1em;
+    margin-top: 2em; }
+  .github--ribbon[class*="bottom--left"] span {
+    -webkit-transform: rotate(-90deg) translateY(1em);
+    -moz-transform: rotate(-90deg) translateY(1em);
+    -ms-transform: rotate(-90deg) translateY(1em);
+    -o-transform: rotate(-90deg) translateY(1em);
+    transform: rotate(-90deg) translateY(1em);
+    margin: 0.5em 2em;
+    margin-top: 2em; }
+  .github--ribbon.ribbon--blue {
+    background: #1b9af7;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), inset 0 0 2em #0662a6, inset 0 0 4em rgba(0, 0, 0, 0.2); }
+  .github--ribbon.ribbon--red {
+    background: #FF4351;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), inset 0 0 2em #dc0010, inset 0 0 4em rgba(0, 0, 0, 0.2); }
+  .github--ribbon.ribbon--green {
+    background: #2ecc71;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), inset 0 0 2em #1b7943, inset 0 0 4em rgba(0, 0, 0, 0.2); }
+  .github--ribbon.ribbon--orange {
+    background: #feae1b;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), inset 0 0 2em #b27401, inset 0 0 4em rgba(0, 0, 0, 0.2); }
+
 .dropdown-menu {
   margin-top: 0;
   border-top-left-radius: 0px;
@@ -350,7 +430,8 @@ Animations : Define CSS3 keyframes animations
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  font-size: 1em; }
 
 /* Navbar
 ---------------------------------------------------------*/

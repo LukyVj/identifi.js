@@ -1,0 +1,81 @@
+
+$s:10em;
+.github--ribbon{
+  position:fixed;
+  width:$s;
+  height:$s;
+  background:#bdc3c7;
+  @include transform(rotate(-45deg) translateY(-$s/2) translateX(-$s/2) scale(1));
+  box-shadow:inset 0 0 2em rgba(0,0,0,.2);
+  @include transform-origin(0 0);
+  overflow:hidden;
+  text-decoration:none;
+  z-index: 9999;
+
+    span{
+      margin: 2.6em 1.5em;
+      font-size:2.5em;
+      display: block;
+      color:#fff;
+      opacity:.8;
+      @include transition(opacity .2s ease,transform .4s ease);
+    }
+
+  &:hover{
+    a{
+      text-decoration: none !important;
+
+      span{
+        opacity:1;
+      text-decoration: none !important;
+      }
+    }
+  }
+  // Positions
+  &[class*="top-"]{top:0;}
+  &[class*="bottom-"]{
+    bottom:-$s;
+    span{
+      margin-top:.5em;
+      margin: .4em 1.6em;
+      @include transform(rotate(45deg));
+    }
+  }
+  &[class*="-left"]{left:0;}
+  &[class*="-right"]{right:-$s;}
+  &[class*="top--right"]{
+    span{
+      @include transform(rotate(90deg) translateY(1em));
+      margin:1.5em 1em ;
+      margin-top:2em;
+    }
+  }
+
+  &[class*="bottom--left"]{
+    span{
+      @include transform(rotate(-90deg) translateY(1em));
+      margin:.5em 2em ;
+      margin-top:2em;
+    }
+  }
+
+
+  // Colors
+  &.ribbon--blue{
+    background:#1B9AF7 ;
+    box-shadow:0 0 0 1px  rgba(0,0,0,.15), inset 0 0 2em darken(#1B9AF7,20%),inset 0 0 4em rgba(0,0,0,.2);
+  }
+  &.ribbon--red{
+    background:#FF4351;
+    box-shadow:0 0 0 1px  rgba(0,0,0,.15),inset 0 0 2em darken(#FF4351,20%),inset 0 0 4em rgba(0,0,0,.2);
+  }
+  &.ribbon--green{
+    background:#2ecc71;
+    box-shadow:0 0 0 1px  rgba(0,0,0,.15),inset 0 0 2em darken(#2ecc71,20%),inset 0 0 4em rgba(0,0,0,.2);
+  }
+  &.ribbon--orange{
+    background:#FEAE1B ;
+    box-shadow:0 0 0 1px  rgba(0,0,0,.15),inset 0 0 2em darken(#FEAE1B,20%),inset 0 0 4em rgba(0,0,0,.2);
+  }
+
+}
