@@ -1,0 +1,13 @@
+.dropdown-menu{
+  margin-top: 0;
+  @include border-top-radius(0px);
+  background: darken($grey, 15%);
+  >li>a{
+    padding: 10px 20px;
+  }
+  >li>a:hover,
+  >li>a:focus {
+    background-color: $grey;
+  }
+}
+
