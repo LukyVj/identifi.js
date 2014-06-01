@@ -1,0 +1,24 @@
+/* ====================================================================================================
+Buttons : Here is the main buttons stylesheet
+======================================================================================================*/
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: $grey;
+  background-color: $white;
+  border-color: darken($white, 20%);
+  text-shadow: 0 0 0;
+}
+
+button[type="button"]{
+  background: transparent;
+  border: 0;
+  color: #fff;
+  line-height: 3.5;
+  ul li a{color: $grey}
+}
+
+

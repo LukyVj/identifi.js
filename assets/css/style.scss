@@ -1,0 +1,65 @@
+@import "ovcss.scss";
+@import "over_bootstrap.scss";
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+}
+
+/* Navbar
+---------------------------------------------------------*/
+.navbar {
+  background: $grey;
+
+  &.navbar-inverse{
+    border-color: darken($grey, 25%);
+  }
+  .navbar-header {
+    a{
+      color: #fff;
+    }
+  }
+}
+/*
+-------------------------------------------------------*/
+.nav-pills>li{
+    border-radius: 0;
+    a{color:#fff;}
+
+}
+.nav-pills {
+  .dropdown-menu{
+     a{
+        border-radius: 0;
+        color: #262626;
+    }
+  }
+  .dropdown-toggle{
+     &:focus{
+      background: darken($grey, 15%);
+    }
+  }
+}
+.nav-pills > li:hover > a{
+    background: darken($grey, 15%);
+    color: #fff;
+}
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover,
+.nav-pills>li.active>a:focus{
+  background: darken($grey, 15%);
+  border-radius: 0;
+}
+
+/*
+-------------------------------------------------------*/
+
+.jumbotron {
+  background: #333333 url(../images/background_old_group.png) no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0,0,0,.4);
+}
