@@ -8,7 +8,31 @@ $color-css: #3498db;
 $color-javascript: #f1c40f;
 $color-misc: #2ecc71;
 
+$purple: #3D3077;
+
 $grey: #7f8c8d;
 $white: #ecf0f1;
+$blue: #428BCA;
+$blue-second: #1B98F4;
 
+
+$light-purple: lighten($purple, 15%);
+$light-blue: saturate(lighten($blue, 15%), 5%);
 $dark-background: #2c3e50;
+
+/* Shortcuts
+--------------------------------------------------------------------------------------------------*/
+$p: $purple;
+$g: $grey;
+$w: $white;
+$b: $blue;
+$b-s: $blue-second;
+$l-p: $light-purple;
+$l-b: $light-blue;
+$d-b: $dark-background;
+
+
+
+/* Theme
+--------------------------------------------------------------------------------------------------*/
+$color-theme: $l-p;

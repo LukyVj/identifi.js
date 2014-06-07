@@ -13,6 +13,19 @@ Buttons : Here is the main buttons stylesheet
   text-shadow: 0 0 0;
 }
 
+.btn{
+  &.btn-primary{
+    &.btn-lg{
+      background: $color-theme;
+      border-color: $purple;
+      color: lighten($white, 15%);
+      border-radius: 2px;
+      padding: .8em 1em;
+    }
+  }
+}
+
+
 button[type="button"]{
   background: transparent;
   border: 0;

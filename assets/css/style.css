@@ -236,6 +236,10 @@ Colors : Here you define your color palette & colorscheme, we defined some fresh
  __________________________
 | It's all about variables |
 ======================================================================================================*/
+/* Shortcuts
+--------------------------------------------------------------------------------------------------*/
+/* Theme
+--------------------------------------------------------------------------------------------------*/
 /* ====================================================================================================
 Base : This stylesheet will be your base, you will define the main lines of your project stylesheet.
 ======================================================================================================*/
@@ -273,6 +277,13 @@ Buttons : Here is the main buttons stylesheet
   background-color: #ecf0f1;
   border-color: #b1c2c6;
   text-shadow: 0 0 0; }
+
+.btn.btn-primary.btn-lg {
+  background: #5946ae;
+  border-color: #3d3077;
+  color: white;
+  border-radius: 2px;
+  padding: .8em 1em; }
 
 button[type="button"] {
   background: transparent;
@@ -319,6 +330,14 @@ Animations : Define CSS3 keyframes animations
 -------------------------------------------------------------------*/
 /*
 -----------------------------------------------------------------*/
+/* Font
+-----------------------------------------------------------------*/
+/* borders
+-----------------------------------------------------------------*/
+/* single element
+-----------------------------------------------------------------*/
+/* Square
+------------------------------------------------------------------*/
 /*
 
   If it’s a hack, it goes in shame.css.
@@ -332,8 +351,14 @@ Animations : Define CSS3 keyframes animations
   Even better, get a tech-debt story in which you can dedicate actual sprint time to it.
 
 */
+/*
+Force color on menu links
+*/
 .dropdown-menu li a {
-  color: #fff !important; }
+  color: white !important; }
+
+.page-header:after {
+  background-color: transparent !important; }
 
 /* ==========================================================================
  Main style of your project  :
@@ -420,25 +445,54 @@ Animations : Define CSS3 keyframes animations
   margin-top: 0;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-  background: #5a6465; }
+  background: #3d3077; }
   .dropdown-menu > li > a {
     padding: 10px 20px; }
   .dropdown-menu > li > a:hover,
   .dropdown-menu > li > a:focus {
-    background-color: #7f8c8d; }
+    background-color: #5946ae; }
+
+/* pre code
+----------------------------------------------------------------------*/
+pre, code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #ecf0f1;
+  background-color: #5946ae;
+  border: 2px solid #3d3077;
+  white-space: nowrap;
+  border-radius: 4px; }
+
+pre code {
+  border: none; }
+
+::selection {
+  background: rgba(89, 70, 174, 0.8);
+  color: #ecf0f1;
+  padding: .5em; }
+  code ::selection {
+    background: white;
+    color: black; }
 
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
   padding-top: 50px;
   padding-bottom: 20px;
   font-size: 1em; }
+  body.presentation {
+    background: #123456; }
+  body a {
+    color: #5946ae; }
+  body strong {
+    font-weight: bold;
+    color: #5946ae; }
 
 /* Navbar
 ---------------------------------------------------------*/
 .navbar {
-  background: #7f8c8d; }
+  background: #5946ae; }
   .navbar.navbar-inverse {
-    border-color: #424a4a; }
+    border-color: #2a2153; }
   .navbar .navbar-header a {
     color: #fff; }
 
@@ -453,16 +507,16 @@ body {
   border-radius: 0;
   color: #262626; }
 .nav-pills .dropdown-toggle:focus {
-  background: #5a6465; }
+  background: #3d3077; }
 
 .nav-pills > li:hover > a {
-  background: #5a6465;
+  background: #3d3077;
   color: #fff; }
 
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  background: #5a6465;
+  background: #3d3077;
   border-radius: 0; }
 
 /*
@@ -473,3 +527,108 @@ body {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); }
+
+/* Page header
+-------------------------------------------------------*/
+.page-header {
+  float: left;
+  width: 100%;
+  border-bottom: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px; }
+  .page-header:not(.first) {
+    background: #5946ae;
+    color: #ecf0f1; }
+  .page-header h1, .page-header h2, .page-header h3 {
+    padding-left: 1rem;
+    margin-bottom: 0rem; }
+
+/* Trinity
+--------------------------------------------------------*/
+.trinity [class*="col"]:nth-child(1) h2:before,
+.trinity [class*="col"]:nth-child(2) h2:before,
+.trinity [class*="col"]:nth-child(3) h2:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 2em;
+  height: 2em; }
+
+/* Sections (col-md-12)
+-------------------------------------------------------*/
+.col-md-12 {
+  margin-bottom: 0em;
+  border: 2px solid #5946ae;
+  border-top: none;
+  padding-top: .8em; }
+
+/* Footer
+------------------------------------------------------*/
+footer {
+  height: auto;
+  width: 100%;
+  background: #5946ae;
+  padding: .6em 0;
+  float: left; }
+  footer p {
+    float: none;
+    display: block;
+    width: 80%;
+    margin: auto;
+    color: #ecf0f1;
+    font-family: "SourceSerifPro-Regular", "Times new roman", serif; }
+    footer p a {
+      color: #7ab0df;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
+
+/* Live demo
+--------------------------------------------------------------*/
+#hiddenDemo h4 {
+  position: absolute;
+  color: #fff;
+  bottom: 1em;
+  left: 1em;
+  text-align: center; }
+#hiddenDemo img {
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  max-height: 600px;
+  z-index: -1;
+  max-width: 800px;
+  padding: 1em;
+  top: 1em;
+  left: 1em;
+  opacity: 0; }
+  #hiddenDemo img.display {
+    opacity: 1;
+    z-index: 10; }
+
+/* Media queries
+--------------------------------------------------------------*/
+@media all and (max-width: 768px) {
+  .navbar-brand {
+    text-align: center;
+    width: calc(100% - 57px);
+    font-size: 1.2em; }
+
+  .nav-pills {
+    background: #6653ba;
+    -webkit-transition: height 0.3s ease;
+    -moz-transition: height 0.3s ease;
+    transition: height 0.3s ease;
+    height: 0;
+    overflow: hidden;
+    width: calc(100% + 32px);
+    margin-left: -18px; }
+    .nav-pills.open {
+      height: auto;
+      overflow: visible; }
+    .nav-pills > li {
+      width: 100%;
+      text-align: center; }
+      .nav-pills > li .dropdown-toggle {
+        width: 100%; }
+      .nav-pills > li .dropdown-menu {
+        width: 100%; } }

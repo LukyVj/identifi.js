@@ -23,9 +23,55 @@ $(function() {
     })
   }
 
+  // // Hide content
+  // function hideContent(){
+  //   $section = $('.col-md-12');
+  //   $section.slideUp(0);
+  //   $section.on('mouseover', function(){
+  //     var $this = $(this);
+  //     $this.slideDown('slow');
+  //   });
+
+  // }
+
+  function mobileMenu(){
+
+    var triggerMenu = $('.navbar-toggle'),
+    mobileNav = $('.nav-pills');
+
+    triggerMenu.on('click', function(){
+
+      if(mobileNav.hasClass('open')){
+        mobileNav.removeClass('open');
+      } else {
+        mobileNav.addClass('open');
+      }
+    });
+  }
+
+  function liveDemo(){
+    var triggerDemo = $('#liveDemo');
+    var allNotJumb = $('.wrapper');
+    var hiddenDemo = $('#hiddenDemo');
+    triggerDemo.on('click', function(){
+       allNotJumb.fadeOut();
+       hiddenDemo.find('img').toggleClass('display').fadeIn();
+       $('body').addClass('presentation');
+    });
+    hiddenDemo.on('click', function(){
+      var $this = $(this);
+      allNotJumb.fadeIn();
+      $this.find('img').toggleClass('display').fadeOut();
+       $('body').removeClass('presentation');
+    })
+
+  }
 
 
   activeLinks();
   animateScroll();
+  mobileMenu();
+  liveDemo();
+  //hideContent();
 
 }).call($(this))

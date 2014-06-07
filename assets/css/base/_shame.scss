@@ -12,10 +12,22 @@
 
 */
 
+$i : !important;
+
+/*
+Force color on menu links
+*/
 .dropdown-menu{
     li{
       a{
-        color: #fff !important;
+        color: #fff $i;
       }
     }
+}
+
+// page header bourbon fix
+.page-header{
+  &:after{
+    background-color: transparent $i;
+  }
 }

@@ -1,13 +1,28 @@
 .dropdown-menu{
   margin-top: 0;
   @include border-top-radius(0px);
-  background: darken($grey, 15%);
+  background: darken($color-theme, 15%);
   >li>a{
     padding: 10px 20px;
   }
   >li>a:hover,
   >li>a:focus {
-    background-color: $grey;
+    background-color: $color-theme;
   }
 }
 
+/* pre code
+----------------------------------------------------------------------*/
+pre, code{
+  padding: 2px 4px;
+font-size: 90%;
+color: $white;
+background-color: $color-theme;
+border: 2px solid darken($color-theme, 15%);
+white-space: nowrap;
+border-radius: 4px;
+}
+
+pre code{
+  border: none;
+}

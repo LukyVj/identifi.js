@@ -40,3 +40,33 @@
   background:url($url) no-repeat center center ;
   background-size:cover;
 }
+
+/* Font
+-----------------------------------------------------------------*/
+@mixin font-family($font, $fallback, $serif){
+  font-family: $font, $fallback, $serif;
+}
+@mixin selected-family(){
+  @include font-family($font-name, $font-fallback, serif);
+}
+
+/* borders
+-----------------------------------------------------------------*/
+@mixin border-not($size, $color, $type, $not){
+  border: $size $color $type;
+  border-#{$not}: none;
+}
+/* single element
+-----------------------------------------------------------------*/
+@mixin single-element(){
+  content:'';
+  display: block;
+  position: absolute;
+}
+
+/* Square
+------------------------------------------------------------------*/
+@mixin square($size){
+  width: $size;
+  height: $size;
+}
