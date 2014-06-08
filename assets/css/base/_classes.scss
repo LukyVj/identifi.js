@@ -1,5 +1,5 @@
 /* ====================================================================================================
-Classes : This library could be named helpers.css, here you will find all technical classes 
+Classes : This library could be named helpers.css, here you will find all technical classes
 (ex : .hide, .clearfix, .fix )
 ======================================================================================================*/
 .clearfix:before,
@@ -9,3 +9,8 @@ Classes : This library could be named helpers.css, here you will find all techni
   clear: both;
 }
 
+.imp{
+  color: #fff;
+ // font-weight: bold;
+  text-shadow: 0 1px 0 $r;
+}

@@ -95,6 +95,7 @@
                   <li><a href="#requirements">Requirements</a></li>
                   <li><a href="#insert-an-image">Insert an image</a></li>
                   <li><a href="#use-data-attributes">Data-attributes</a></li>
+                  <li ><a href="#issues">Limit & issues</a></li>
                   <li><a href="#thanks-to">Thanks to</a></li>
                   <li><a href="#demo">Demo</a></li>
                   <li><a href="#join-us">Join us</a></li>
@@ -109,7 +110,8 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
         <div class="container">
-          <h1>identifi.js</h1>
+          <h1>identifi.js <small class="label">v.0.0.2</small>
+</h1>
           <p>identifi.js is an open project, which aims to make the people identification easier on pictures.</p>
           <p><a href="https://github.com/LukyVj/identifi.js" class="btn btn-primary btn-lg" role="button">View it on github &raquo;</a></p>
         </div>
@@ -119,18 +121,18 @@
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-md-4">
-            <h2>Simple</h2>
+            <h2 data-number="1">Simple</h2>
             <p>When I created identifi.js, my aim was to keep it simple, using web technologies such as HTML CSS and Javascript, to let anyone working on/with it.
             If you know how to write html, you already knew how to use identifi.js, pretty cool huh ? </p>
           </div>
           <div class="col-md-4">
-            <h2>Classy</h2>
+            <h2 data-number="2">Classy</h2>
             <p>identifi.js doesn't need to be pretty, it just need to do its job, and this is what it does, with a minimal but efficient style.
             Of course, You can add custom styles via the css, but I'll cover a chapter dedicated to it. </p>
          </div>
           <div class="col-md-4">
-            <h2>Open-source</h2>
-            <p>Because we love the web, our generation loves to create open source systems, that will make the web evolve faster. Thats why identifi.js is an open source project, because it could be interesting to extend the system, and make identification easier on pictures, for everyone !</p>
+            <h2 data-number="3">Open-source</h2>
+            <p>Because we love the web, our generation loves to create open source systems, that will make the web evolve faster. Thats why identifi.js is an open source project & it could be interesting to extend the system, and make identification easier on pictures, for everyone !</p>
           </div>
         </div>
 
@@ -192,13 +194,13 @@
           <p>Once your image is inserted to the document, make sure to use the proper data-attribute set, let’s look into the available options :</p>
 
           <ul>
-          <li><p><code>data-peopleNumber="2"</code> <span class="typicons-right"></span> Will declare how many person are on your image</p></li>
-          <li><p><code>data-person1x="35"</code> <span class="typicons-right"></span> Will set the <code>x</code> position of the first person (ideally, target the face)</p></li>
-          <li><p><code>data-person1y="125"</code> <span class="typicons-right"></span> Will set the <code>y</code> position of the first person (ideally, target the face)</p></li>
-          <li><p><code>data-person1name="Kevin"</code> <span class="typicons-right"></span> The name/pseudo/anything related to the first person</p></li>
-          <li><p><code>data-person2x="258"</code> <span class="typicons-right"></span> Will set the <code>x</code> position of the second person (ideally, target the face)</p></li>
-          <li><p><code>data-person2y="125"</code> <span class="typicons-right"></span> Will set the <code>y</code> position of the second person (ideally, target the face)</p></li>
-          <li><p><code>data-person2name="Lucas"</code> <span class="typicons-right"></span> The name/pseudo/anything related to the first person</p></li>
+          <li><p><code>data-peopleNumber="<span class="imp">2</span>"</code> <span class="typicons-right"></span> Will declare how many person are on your image</p></li>
+          <li><p><code>data-person1x="<span class="imp">35</span>"</code> <span class="typicons-right"></span> Will set the <code>x</code> position of the first person (ideally, target the face)</p></li>
+          <li><p><code>data-person1y="<span class="imp">125</span>"</code> <span class="typicons-right"></span> Will set the <code>y</code> position of the first person (ideally, target the face)</p></li>
+          <li><p><code>data-person1name="<span class="imp">Kevin</span>"</code> <span class="typicons-right"></span> The name/pseudo/anything related to the first person</p></li>
+          <li><p><code>data-person2x="<span class="imp">258</span>"</code> <span class="typicons-right"></span> Will set the <code>x</code> position of the second person (ideally, target the face)</p></li>
+          <li><p><code>data-person2y="<span class="imp">125</span>"</code> <span class="typicons-right"></span> Will set the <code>y</code> position of the second person (ideally, target the face)</p></li>
+          <li><p><code>data-person2name="<span class="imp">Lucas</span>"</code> <span class="typicons-right"></span> The name/pseudo/anything related to the first person</p></li>
           </ul>
 
           <p>The <code>x</code> and <code>y</code> coordonates are declared in <strong>px</strong> .</p>
@@ -207,19 +209,31 @@
 
           <pre class="prettyprint prettyprinted"><code><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"path/to/my/image.png"</span><span class="pln">
 
-          </span><span class="atn">data-peopleNumber</span><span class="pun">=</span><span class="atv">"2"</span><span class="pln">
+          </span><span class="atn">data-peopleNumber</span><span class="pun">=</span><span class="atv">"<span class="imp">2</span>"</span><span class="pln">
 
-          </span><span class="atn">data-person1x</span><span class="pun">=</span><span class="atv">"35"</span><span class="pln">
-          </span><span class="atn">data-person1y</span><span class="pun">=</span><span class="atv">"125"</span><span class="pln">
-          </span><span class="atn">data-person1name</span><span class="pun">=</span><span class="atv">"Kevin"</span><span class="pln">
+          </span><span class="atn">data-person1x</span><span class="pun">=</span><span class="atv">"<span class="imp">35</span>"</span><span class="pln">
+          </span><span class="atn">data-person1y</span><span class="pun">=</span><span class="atv">"<span class="imp">125</span>"</span><span class="pln">
+          </span><span class="atn">data-person1name</span><span class="pun">=</span><span class="atv">"<span class="imp">Kevin</span>"</span><span class="pln">
 
-          </span><span class="atn">data-person2x</span><span class="pun">=</span><span class="atv">"258"</span><span class="pln">
-          </span><span class="atn">data-person2y</span><span class="pun">=</span><span class="atv">"125"</span><span class="pln">
-          </span><span class="atn">data-person2name</span><span class="pun">=</span><span class="atv">"Lucas"</span><span class="pln">
+          </span><span class="atn">data-person2x</span><span class="pun">=</span><span class="atv">"<span class="imp">258</span>"</span><span class="pln">
+          </span><span class="atn">data-person2y</span><span class="pun">=</span><span class="atv">"<span class="imp">125</span>"</span><span class="pln">
+          </span><span class="atn">data-person2name</span><span class="pun">=</span><span class="atv">"<span class="imp">Lucas</span>"</span><span class="pln">
           </span><span class="tag">/&gt;</span></code></pre>
 
           <p>Now, save, and hover your picture ! Thats it !</p>
         </div>
+
+        <!-- -->
+        <div class="page-header" data-state="warning">
+         <h3 id="issues">Limits & issues :</h3>
+        </div>
+        <div class="col-md-12" data-state="warning">
+         <ul>
+           <li><p>The image must have a fixed width, so the plugin will not work with responsive systems.</p></li>
+          <li><p>The tooltip width is fixed, it would be better to size it related to the number of characters into the name.</p></li>
+         </ul>
+        </div>
+        <!-- -->
 
         <div class="page-header">
          <h3 id="thanks-to">Thanks to :</h3>

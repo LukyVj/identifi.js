@@ -55,13 +55,13 @@ $(function() {
     var hiddenDemo = $('#hiddenDemo');
     triggerDemo.on('click', function(){
        allNotJumb.fadeOut();
-       hiddenDemo.find('img').toggleClass('display').fadeIn();
+       hiddenDemo.find('img,h4').toggleClass('display').fadeIn();
        $('body').addClass('presentation');
     });
     hiddenDemo.on('click', function(){
       var $this = $(this);
       allNotJumb.fadeIn();
-      $this.find('img').toggleClass('display').fadeOut();
+      $this.find('img,h4').toggleClass('display').fadeOut();
        $('body').removeClass('presentation');
     })
 
