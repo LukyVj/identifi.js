@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta author="Luky Vj, Lucas Bonomi">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Identifi.js</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  <!-- Gthub ribbon -->
+  <a href="https://github.com/LukyVj/identifi.js" class="github--ribbon bottom--right ribbon--blue">
+    <span class="fontawesome-github"></span>
+  </a>
+    <!-- Anchor -->
+    <div id="top"></div>
+    <!-- / -->
+
+    <!-- Live demo -->
+    <div id="hiddenDemo">
+        <h4>Click the image to close the demo</h4>
+
+      <img src="assets/images/background_old_group.jpg"
+
+        data-peopleNumber="5"
+
+        data-person1x="140"
+        data-person1y="310"
+        data-person1name="Charles"
+
+        data-person2x="320"
+        data-person2y="270"
+        data-person2name="Elisabeth"
+
+        data-person3x="630"
+        data-person3y="225"
+        data-person3name="Edward"
+
+        data-person4x="500"
+        data-person4y="190"
+        data-person4name="Lucy"
+
+        data-person5x="195"
+        data-person5y="190"
+        data-person5name="Peter"
+
+        />
+
+    </div>
+    <!-- / -->
+      <div class="wrapper">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#top">identifi.js</a>
+          </div>
+          <ul class="nav nav-pills">
+            <li class="active"><a href="#">Home</a></li>
+            <li> <button type="button" class="dropdown-toggle" data-toggle="dropdown">
+                  Documentation
+                  <span class="caret"></span>
+                </button>
+
+                <ul class="dropdown-menu">
+                  <li><a href="#the-idea">The idea</a></li>
+                  <li><a href="#how-it-works">How it works</a></li>
+                  <li><a href="#requirements">Requirements</a></li>
+                  <li><a href="#insert-an-image">Insert an image</a></li>
+                  <li><a href="#use-data-attributes">Data-attributes</a></li>
+                  <li ><a href="#issues">Limit & issues</a></li>
+                  <li><a href="#thanks-to">Thanks to</a></li>
+                  <li><a href="#demo">Demo</a></li>
+                  <li><a href="#join-us">Join us</a></li>
+                </ul>
+            </li>
+            <li><a href="#liveDemo" id="liveDemo">Live Demo</a></li>
+            <li><a href="https://github.com/LukyVj/identifi.js">Download</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1>identifi.js <small class="label">v.0.0.2</small>
+</h1>
+          <p>identifi.js is an open project, which aims to make the people identification easier on pictures.</p>
+          <p><a href="https://github.com/LukyVj/identifi.js" class="btn btn-primary btn-lg" role="button">View it on github &raquo;</a></p>
+        </div>
+      </div>
+
+      <div class="container trinity">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            <h2 data-number="1">Simple</h2>
+            <p>When I created identifi.js, my aim was to keep it simple, using web technologies such as HTML CSS and Javascript, to let anyone working on/with it.
+            If you know how to write html, you already knew how to use identifi.js, pretty cool huh ? </p>
+          </div>
+          <div class="col-md-4">
+            <h2 data-number="2">Classy</h2>
+            <p>identifi.js doesn't need to be pretty, it just need to do its job, and this is what it does, with a minimal but efficient style.
+            Of course, You can add custom styles via the css, but I'll cover a chapter dedicated to it. </p>
+         </div>
+          <div class="col-md-4">
+            <h2 data-number="3">Open-source</h2>
+            <p>Because we love the web, our generation loves to create open source systems, that will make the web evolve faster. Thats why identifi.js is an open source project & it could be interesting to extend the system, and make identification easier on pictures, for everyone !</p>
+          </div>
+        </div>
+
+
+        <div class="page-header first">
+          <h1 id="identifijs">Documentation <small>identifi.js</small></h1>
+        </div>
+
+        <div class="page-header">
+          <h2 id="the-idea">The idea :</h2>
+        </div>
+
+        <div class="col-md-12">
+          <p>Basically, the idea popped out when I was browsing pictures on instagram, and I thought that it could be cool to have a such <em>identification</em> system on the web, but without a shitload of scripts and technics.</p>
+
+        <p>So here is the first draft.</p>
+        </div>
+
+        <div class="page-header">
+        <h2 id="how-it-works">How it works :</h2>
+        </div>
+
+        <div class="col-md-12">
+
+          <p>The operation is simple, everything is about <code>data-attributes</code>, since its cool to use them in HTML5, I decided to <s>ab</s>use them.</p>
+
+        </div>
+
+        <div class="page-header">
+          <h3 id="requirements">Requirements :</h3>
+        </div>
+
+        <div class="col-md-12">
+
+          <p>identifi.js needs Jquery to work (for some actions related to the DOM).</p>
+
+          <p>So basically, your document will look like this :</p>
+    <pre><code>  &lt;script type="text/javascrip"src="jquery.min.js"></script>
+  &lt;script type="text/javascrip"src="identifi.min.js"></script></code></pre>
+        </div>
+
+          <div class="page-header">
+          <h3 id="insert-an-image">Insert an image :</h3>
+          </div>
+        <div class="col-md-12">
+
+          <p>To start, pick an image, and insert it into your page : <br>
+          <code>&lt;img src="path/to/my/image.png" /&gt;</code></p>
+
+          <p>Cool ! You already achieved <strong>75%</strong> of the operation !</p>
+
+        </div>
+
+        <div class="page-header">
+        <h3 id="use-data-attributes">Use data-attributes :</h3>
+        </div>
+
+        <div class="col-md-12">
+          <p>Once your image is inserted to the document, make sure to use the proper data-attribute set, let’s look into the available options :</p>
+
+          <ul>
+          <li><p><code>data-peopleNumber="<span class="imp">2</span>"</code> <span class="typicons-right"></span> Will declare how many person are on your image</p></li>
+          <li><p><code>data-person1x="<span class="imp">35</span>"</code> <span class="typicons-right"></span> Will set the <code>x</code> position of the first person (ideally, target the face)</p></li>
+          <li><p><code>data-person1y="<span class="imp">125</span>"</code> <span class="typicons-right"></span> Will set the <code>y</code> position of the first person (ideally, target the face)</p></li>
+          <li><p><code>data-person1name="<span class="imp">Kevin</span>"</code> <span class="typicons-right"></span> The name/pseudo/anything related to the first person</p></li>
+          <li><p><code>data-person2x="<span class="imp">258</span>"</code> <span class="typicons-right"></span> Will set the <code>x</code> position of the second person (ideally, target the face)</p></li>
+          <li><p><code>data-person2y="<span class="imp">125</span>"</code> <span class="typicons-right"></span> Will set the <code>y</code> position of the second person (ideally, target the face)</p></li>
+          <li><p><code>data-person2name="<span class="imp">Lucas</span>"</code> <span class="typicons-right"></span> The name/pseudo/anything related to the first person</p></li>
+          </ul>
+
+          <p>The <code>x</code> and <code>y</code> coordonates are declared in <strong>px</strong> .</p>
+
+          <p>So if you follow the instruction properly, your image should look like this (according to my example) :</p>
+
+          <pre class="prettyprint prettyprinted"><code><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"path/to/my/image.png"</span><span class="pln">
+
+          </span><span class="atn">data-peopleNumber</span><span class="pun">=</span><span class="atv">"<span class="imp">2</span>"</span><span class="pln">
+
+          </span><span class="atn">data-person1x</span><span class="pun">=</span><span class="atv">"<span class="imp">35</span>"</span><span class="pln">
+          </span><span class="atn">data-person1y</span><span class="pun">=</span><span class="atv">"<span class="imp">125</span>"</span><span class="pln">
+          </span><span class="atn">data-person1name</span><span class="pun">=</span><span class="atv">"<span class="imp">Kevin</span>"</span><span class="pln">
+
+          </span><span class="atn">data-person2x</span><span class="pun">=</span><span class="atv">"<span class="imp">258</span>"</span><span class="pln">
+          </span><span class="atn">data-person2y</span><span class="pun">=</span><span class="atv">"<span class="imp">125</span>"</span><span class="pln">
+          </span><span class="atn">data-person2name</span><span class="pun">=</span><span class="atv">"<span class="imp">Lucas</span>"</span><span class="pln">
+          </span><span class="tag">/&gt;</span></code></pre>
+
+          <p>Now, save, and hover your picture ! Thats it !</p>
+        </div>
+
+        <!-- -->
+        <div class="page-header" data-state="warning">
+         <h3 id="issues">Limits & issues :</h3>
+        </div>
+        <div class="col-md-12" data-state="warning">
+         <ul>
+           <li><p>The image must have a fixed width, so the plugin will not work with responsive systems.</p></li>
+          <li><p>The tooltip width is fixed, it would be better to size it related to the number of characters into the name.</p></li>
+         </ul>
+        </div>
+        <!-- -->
+
+        <div class="page-header">
+         <h3 id="thanks-to">Thanks to :</h3>
+        </div>
+        <div class="col-md-12">
+          <ul>
+            <li><a href="https://github.com/dervondenbergen">@Dervondenbergen</a></li>
+          </ul>
+        </div>
+
+       <div class="page-header">
+          <h1 id="demo">Demo :</h1>
+        </div>
+
+        <div class="col-md-12">
+          <p data-height="268" data-theme-id="41" data-slug-hash="iFhdz" data-default-tab="result" class="codepen">See the Pen <a href="http://codepen.io/LukyVj/pen/iFhdz/">identifi.js Demo</a> by LukyVJ (<a href="http://codepen.io/LukyVj">@LukyVj</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+          <script async src="http://codepen.io/assets/embed/ei.js"></script>
+        </div>
+        <div class="page-header">
+          <h3 id="join-us">You want to contribute or chat about the project ? :</h3>
+        </div>
+        <div class="col-md-12">
+          <p><a href="https://gitter.im/LukyVj/identifi.js" title="We're on Gitter !"><img src="https://badges.gitter.im/LukyVj/identifi.js.png" alt="Gitter chat" title="We're on Gitter ! "></a></p>
+        </div>
+
+        </div>
+        <footer>
+          <p>An open project by <a href="http://twitter.com/lukyvj">@LukyVj</a> 2014</p>
+        </footer>
+      </div> <!-- /container -->
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/application.js"></script>
+
+    <!-- Load identifi.js for the homepage -->
+    <script src="src/identifi.min.js"></script>
+  </body>
+</html>

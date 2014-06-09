@@ -1,0 +1,16 @@
+/* ====================================================================================================
+Classes : This library could be named helpers.css, here you will find all technical classes
+(ex : .hide, .clearfix, .fix )
+======================================================================================================*/
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.imp{
+  color: #fff;
+ // font-weight: bold;
+  text-shadow: 0 1px 0 $r;
+}

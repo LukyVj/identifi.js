@@ -1,0 +1,701 @@
+@charset "UTF-8";
+/*! OVCSS v1.0.0 | MIT License | http://lucasbonomi.com/MIT */
+/*
+ * The following stylesheet is the main style.scss of your new OVCSS project.
+ * The stylesheet uses normalize (http://necolas.github.io/normalize.css/) &
+ * bourbon (http://bourbon.io/).
+ *
+ */
+/* ==========================================================================
+ Base importations :
+ ========================================================================== */
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+@import url(http://weloveiconfonts.com/api/?family=brandico);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(http://weloveiconfonts.com/api/?family=fontelico);
+@import url(http://weloveiconfonts.com/api/?family=iconicfill);
+@import url(http://weloveiconfonts.com/api/?family=iconicstroke);
+@import url(http://weloveiconfonts.com/api/?family=maki);
+@import url(http://weloveiconfonts.com/api/?family=openwebicons);
+@import url(http://weloveiconfonts.com/api/?family=typicons);
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block; }
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden], template {
+  display: none; }
+
+a {
+  background: transparent; }
+
+a:active, a:hover {
+  outline: 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+pre {
+  overflow: auto; }
+
+code, kbd, pre, samp {
+  font-family: monospace,monospace;
+  font-size: 1em; }
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+button {
+  overflow: visible; }
+
+button, select {
+  text-transform: none; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+input {
+  line-height: normal; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto; }
+
+optgroup {
+  font-weight: bold; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
+/* ==========================================================================
+ OVCSS Settings library :
+ ========================================================================== */
+/* ==========================================================================
+ OVCSS Typographic settings :
+ ========================================================================== */
+@font-face {
+  font-family: "SourceSerifPro-Regular";
+  src: url("../fonts/SourceSerifPro-Regular/SourceSerifPro-Regular.eot?") format("eot"), url("../fonts/SourceSerifPro-Regular/SourceSerifPro-Regular.otf.woff") format("woff"), url("../fonts/SourceSerifPro-Regular/SourceSerifPro-Regular.svg#SourceSerifPro-Regular") format("svg"), url("../fonts/SourceSerifPro-Regular/SourceSerifPro-Regular.ttf") format("truetype"); }
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "SourceSerifPro-Regular"; }
+body p {
+  font-family: Helvetica; }
+
+/* Typographic media queries */
+@media all and (max-width: 40em) {
+  html, body {
+    font-size: .85rem;
+    line-height: 22px; } }
+@media all and (max-width: 60em) {
+  html, body {
+    font-size: .9rem;
+    line-height: 24px; } }
+/* ====================================================================================================
+Icons stylesheet : 
+We use a free open source service : "WeLoveIconFonts" by  @TimPietrusky (http://weloveiconfonts.com/)
+======================================================================================================*/
+/* brandico */
+[class*="brandico-"]:before {
+  font-family: "brandico", sans-serif; }
+
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: "entypo", sans-serif; }
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: "fontawesome", sans-serif; }
+
+/* fontelico */
+[class*="fontelico-"]:before {
+  font-family: "fontelico", sans-serif; }
+
+/* iconicfill */
+[class*="iconicfill-"]:before {
+  font-family: "iconicfill", sans-serif; }
+
+/* iconicstroke */
+[class*="iconicstroke-"]:before {
+  font-family: "iconicstroke", sans-serif; }
+
+/* maki */
+[class*="maki-"]:before {
+  font-family: "maki", sans-serif; }
+
+/* openwebicons */
+[class*="openwebicons-"]:before {
+  font-family: "openwebicons", sans-serif; }
+
+/* typicons */
+[class*="typicons-"]:before {
+  font-family: "typicons", sans-serif; }
+
+/* zocial */
+[class*="zocial-"]:before {
+  font-family: "zocial", sans-serif; }
+
+/* ====================================================================================================
+Colors : Here you define your color palette & colorscheme, we defined some fresh colors for you
+ __________________________
+| It's all about variables |
+======================================================================================================*/
+/* Shortcuts
+--------------------------------------------------------------------------------------------------*/
+/* Theme
+--------------------------------------------------------------------------------------------------*/
+/* ====================================================================================================
+Base : This stylesheet will be your base, you will define the main lines of your project stylesheet.
+======================================================================================================*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+  line-height: 34px; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  float: left;
+  font-family: "SourceSerifPro-Regular", Helvetica, Helvetica Neue sans-serif; }
+
+html {
+  font-size: 1.1rem;
+  overflow-x: hidden; }
+
+/* ====================================================================================================
+Buttons : Here is the main buttons stylesheet
+======================================================================================================*/
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: #7f8c8d;
+  background-color: #ecf0f1;
+  border-color: #b1c2c6;
+  text-shadow: 0 0 0; }
+
+.btn.btn-primary.btn-lg {
+  background: #5946ae;
+  border-color: #3d3077;
+  color: white;
+  border-radius: 2px;
+  padding: .8em 1em; }
+
+button[type="button"] {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  line-height: 2.7; }
+  button[type="button"] ul li a {
+    color: #7f8c8d; }
+
+/* ====================================================================================================
+Classes : This library could be named helpers.css, here you will find all technical classes
+(ex : .hide, .clearfix, .fix )
+======================================================================================================*/
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.imp {
+  color: #fff;
+  text-shadow: 0 1px 0 #f9276b; }
+
+/* ====================================================================================================
+Basic form stylesheet : Here you define the basic style of your forms
+======================================================================================================*/
+form input {
+  outline: none; }
+  form input::-webkit-input-placeholder {
+    color: black; }
+  form input::-moz-placeholder {
+    color: black; }
+  form input:-moz-placeholder {
+    color: black; }
+  form input:-ms-input-placeholder {
+    color: black; }
+
+/* ====================================================================================================
+Animations : Define CSS3 keyframes animations
+======================================================================================================*/
+@keyframes first-animation {}
+@keyframes second-animation {}
+@keyframes third-animation {}
+@keyframes fourth-animation {}
+/* Helper : Border-radius
+-------------------------------------------------------------------*/
+/* Helper : Borders
+-------------------------------------------------------------------*/
+/*
+-----------------------------------------------------------------*/
+/* Font
+-----------------------------------------------------------------*/
+/* borders
+-----------------------------------------------------------------*/
+/* single element
+-----------------------------------------------------------------*/
+/* Square
+------------------------------------------------------------------*/
+/*
+
+  If it’s a hack, it goes in shame.css.
+  Document all hacks fully:
+  What part of the codebase does it relate to?
+  Why was this needed?
+  How does this fix it?
+  How might you fix it properly, given more time?
+  Do not blame the developer; if they explained why they had to do it then their reasons are probably (hopefully) valid.
+  Try and clean shame.css up when you have some down time.
+  Even better, get a tech-debt story in which you can dedicate actual sprint time to it.
+
+*/
+/*
+Force color on menu links
+*/
+.dropdown-menu li a {
+  color: white !important; }
+
+.page-header:after {
+  background-color: transparent !important; }
+
+/* ==========================================================================
+ Main style of your project  :
+ ========================================================================== */
+.github--ribbon {
+  position: fixed;
+  width: 10em;
+  height: 10em;
+  background: #bdc3c7;
+  -webkit-transform: rotate(-45deg) translateY(-5em) translateX(-5em) scale(1);
+  -moz-transform: rotate(-45deg) translateY(-5em) translateX(-5em) scale(1);
+  -ms-transform: rotate(-45deg) translateY(-5em) translateX(-5em) scale(1);
+  -o-transform: rotate(-45deg) translateY(-5em) translateX(-5em) scale(1);
+  transform: rotate(-45deg) translateY(-5em) translateX(-5em) scale(1);
+  box-shadow: inset 0 0 2em rgba(0, 0, 0, 0.2);
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+  overflow: hidden;
+  text-decoration: none;
+  z-index: 9999; }
+  .github--ribbon span {
+    margin: 2.6em 1.5em;
+    font-size: 2.5em;
+    display: block;
+    color: #fff;
+    opacity: .8;
+    -webkit-transition: opacity 0.2s ease, -webkit-transform 0.4s ease;
+    -moz-transition: opacity 0.2s ease, -moz-transform 0.4s ease;
+    transition: opacity 0.2s ease, transform 0.4s ease; }
+  .github--ribbon:hover a {
+    text-decoration: none !important; }
+    .github--ribbon:hover a span {
+      opacity: 1;
+      text-decoration: none !important; }
+  .github--ribbon[class*="top-"] {
+    top: 0; }
+  .github--ribbon[class*="bottom-"] {
+    bottom: -10em; }
+    .github--ribbon[class*="bottom-"] span {
+      margin-top: .5em;
+      margin: .4em 1.6em;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg); }
+  .github--ribbon[class*="-left"] {
+    left: 0; }
+  .github--ribbon[class*="-right"] {
+    right: -10em; }
+  .github--ribbon[class*="top--right"] span {
+    -webkit-transform: rotate(90deg) translateY(1em);
+    -moz-transform: rotate(90deg) translateY(1em);
+    -ms-transform: rotate(90deg) translateY(1em);
+    -o-transform: rotate(90deg) translateY(1em);
+    transform: rotate(90deg) translateY(1em);
+    margin: 1.5em 1em;
+    margin-top: 2em; }
+  .github--ribbon[class*="bottom--left"] span {
+    -webkit-transform: rotate(-90deg) translateY(1em);
+    -moz-transform: rotate(-90deg) translateY(1em);
+    -ms-transform: rotate(-90deg) translateY(1em);
+    -o-transform: rotate(-90deg) translateY(1em);
+    transform: rotate(-90deg) translateY(1em);
+    margin: 0.5em 2em;
+    margin-top: 2em; }
+  .github--ribbon.ribbon--blue {
+    background: #1b9af7;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), inset 0 0 2em #0662a6, inset 0 0 4em rgba(0, 0, 0, 0.2); }
+  .github--ribbon.ribbon--red {
+    background: #FF4351;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), inset 0 0 2em #dc0010, inset 0 0 4em rgba(0, 0, 0, 0.2); }
+  .github--ribbon.ribbon--green {
+    background: #2ecc71;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), inset 0 0 2em #1b7943, inset 0 0 4em rgba(0, 0, 0, 0.2); }
+  .github--ribbon.ribbon--orange {
+    background: #feae1b;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), inset 0 0 2em #b27401, inset 0 0 4em rgba(0, 0, 0, 0.2); }
+
+.dropdown-menu {
+  margin-top: 0;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  background: #3d3077; }
+  .dropdown-menu > li > a {
+    padding: 10px 20px; }
+  .dropdown-menu > li > a:hover,
+  .dropdown-menu > li > a:focus {
+    background-color: #5946ae; }
+
+/* pre code
+----------------------------------------------------------------------*/
+pre, code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: white;
+  background-color: #978ad0;
+  border: 2px solid #503f9b;
+  white-space: nowrap;
+  border-radius: 4px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); }
+
+pre code {
+  border: none; }
+
+/* Labels
+---------------------------------------*/
+small.label {
+  box-shadow: inset 0 0 0 1px #463789;
+  background: #5946ae;
+  top: -.5em;
+  position: relative; }
+
+::selection {
+  background: rgba(89, 70, 174, 0.8);
+  color: #ecf0f1;
+  padding: .5em; }
+  code ::selection {
+    background: white;
+    color: black; }
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-size: 1em; }
+  body.presentation {
+    background: #123456; }
+  body a {
+    color: #5946ae; }
+  body strong {
+    font-weight: bold;
+    color: #5946ae; }
+  body p {
+    font-weight: 500; }
+
+/* Navbar
+---------------------------------------------------------*/
+.navbar {
+  background: #5946ae; }
+  .navbar.navbar-inverse {
+    border-color: #2a2153; }
+  .navbar .navbar-header a {
+    color: #fff; }
+
+/*
+-------------------------------------------------------*/
+.nav-pills > li {
+  border-radius: 0; }
+  .nav-pills > li a {
+    color: #fff; }
+
+.nav-pills .dropdown-menu a {
+  border-radius: 0;
+  color: #262626; }
+.nav-pills .dropdown-toggle:focus {
+  background: #3d3077; }
+
+.nav-pills > li:hover > a {
+  background: #3d3077;
+  color: #fff; }
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  background: #3d3077;
+  border-radius: 0; }
+
+/*
+-------------------------------------------------------*/
+.jumbotron {
+  background: #333333 url(../images/background_old_group.png) no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); }
+  .jumbotron small {
+    font-size: 1rem;
+    color: #ecf0f1; }
+
+/* Page header
+-------------------------------------------------------*/
+.page-header {
+  float: left;
+  width: 100%;
+  border-bottom: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px; }
+  .page-header:not(.first) {
+    background: #5946ae;
+    color: #ecf0f1; }
+  .page-header h1, .page-header h2, .page-header h3 {
+    padding-left: 1rem;
+    margin-bottom: 0rem; }
+  .page-header[data-state="warning"] {
+    background: #f9276b;
+    color: white;
+    border-color: #f9276b; }
+
+/* Trinity
+--------------------------------------------------------*/
+.trinity [class*="col"]:nth-child(1) h2,
+.trinity [class*="col"]:nth-child(2) h2,
+.trinity [class*="col"]:nth-child(3) h2 {
+  line-height: 1.2em;
+  padding-left: 2.94rem; }
+  .trinity [class*="col"]:nth-child(1) h2:before,
+  .trinity [class*="col"]:nth-child(2) h2:before,
+  .trinity [class*="col"]:nth-child(3) h2:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 2.1rem;
+    height: 2.1rem;
+    margin-left: -3.15rem;
+    float: left;
+    border: 2px solid #5946ae;
+    border-radius: 100%;
+    text-align: center;
+    content: attr(data-number);
+    font-size: .9em;
+    line-height: 1.4;
+    color: #5946ae;
+    background: rgba(89, 70, 174, 0.1); }
+
+/* Sections (col-md-12)
+-------------------------------------------------------*/
+.col-md-12 {
+  margin-bottom: 0em;
+  padding-top: .8em;
+  border: 2px solid #5946ae;
+  border-top: none; }
+  .col-md-12[data-state="warning"] {
+    border: 2px solid #f9276b;
+    border-top: none; }
+
+/* Footer
+------------------------------------------------------*/
+footer {
+  height: auto;
+  width: 100%;
+  background: #5946ae;
+  padding: .6em 0;
+  float: left; }
+  footer p {
+    float: none;
+    display: block;
+    width: 80%;
+    margin: auto;
+    color: #ecf0f1;
+    font-family: "SourceSerifPro-Regular", "Times new roman", serif; }
+    footer p a {
+      color: #7ab0df;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
+
+/* Live demo
+--------------------------------------------------------------*/
+#hiddenDemo h4 {
+  position: absolute;
+  color: #fff;
+  bottom: 1em;
+  left: 1em;
+  text-align: center;
+  display: none; }
+  #hiddenDemo h4.display {
+    display: block; }
+#hiddenDemo img {
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  max-height: 600px;
+  z-index: -1;
+  max-width: 800px;
+  padding: 1em;
+  top: 1em;
+  left: 1em;
+  opacity: 0; }
+  #hiddenDemo img.display {
+    opacity: 1;
+    z-index: 10; }
+
+/* Media queries
+--------------------------------------------------------------*/
+@media all and (max-width: 980px) {
+  .navbar-brand {
+    text-align: center;
+    width: calc(100% - 57px);
+    font-size: 1.2em; }
+
+  .nav-pills {
+    background: #6653ba;
+    -webkit-transition: height 0.3s ease;
+    -moz-transition: height 0.3s ease;
+    transition: height 0.3s ease;
+    height: 0;
+    overflow: hidden;
+    width: calc(100% + 32px);
+    margin-left: -18px; }
+    .nav-pills.open {
+      height: auto;
+      overflow: visible; }
+    .nav-pills > li {
+      width: 100%;
+      text-align: center; }
+      .nav-pills > li .dropdown-toggle {
+        width: 100%; }
+      .nav-pills > li .dropdown-menu {
+        width: 100%; }
+
+  .first {
+    border: none !important;
+    float: left; }
+
+  .container.trinity {
+    width: 100%;
+    float: left;
+    margin-left: 0; }
+
+  .col-md-12, .page-header {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    border-radius: 0; }
+    .col-md-12 > *, .page-header > * {
+      margin: 0; }
+
+  .page-header h1, .page-header h2, .page-header h3 {
+    line-height: 2;
+    padding-bottom: 0;
+    margin-bottom: 0; }
+
+  .col-md-12 {
+    border: 0 !important; } }
