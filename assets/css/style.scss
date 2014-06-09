@@ -1,0 +1,281 @@
+@import "ovcss.scss";
+@import "ribbons.scss";
+@import "over_bootstrap.scss";
+
+::selection{
+  background: rgba($color-theme, .8);
+  color: $white;
+  padding: .5em;
+
+  code &{
+    background: white;
+    color: black;
+  }
+}
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-size: 1em;
+
+  &.presentation{
+    background: #123456
+  }
+
+  a{
+    color: $color-theme;
+  }
+
+  strong{
+    font-weight: bold;
+    color: $color-theme;
+  }
+  p{
+    font-weight: 500;
+  }
+}
+
+/* Navbar
+---------------------------------------------------------*/
+.navbar {
+  background: $color-theme;
+
+  &.navbar-inverse{
+    border-color: darken($color-theme, 25%);
+  }
+  .navbar-header {
+    a{
+      color: #fff;
+    }
+  }
+}
+/*
+-------------------------------------------------------*/
+.nav-pills>li{
+    border-radius: 0;
+    a{color:#fff;}
+}
+.nav-pills {
+  .dropdown-menu{
+     a{
+        border-radius: 0;
+        color: #262626;
+    }
+  }
+  .dropdown-toggle{
+     &:focus{
+      background: darken($color-theme, 15%);
+    }
+  }
+}
+.nav-pills > li:hover > a{
+    background: darken($color-theme, 15%);
+    color: #fff;
+}
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover,
+.nav-pills>li.active>a:focus{
+  background: darken($color-theme, 15%);
+  border-radius: 0;
+}
+
+/*
+-------------------------------------------------------*/
+
+.jumbotron {
+  background: #333333 url(../images/background_old_group.png) no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0,0,0,.4);
+  small{
+    font-size: 1rem;
+    color: $white;
+  }
+}
+
+/* Page header
+-------------------------------------------------------*/
+.page-header{
+  &:not(.first){
+    background: $color-theme;
+    color: $white;
+    }
+  float: left;
+  width: 100%;
+  border-bottom: 0;
+  @include border-top-radius(4px);
+
+  h1,h2,h3{
+    padding-left: 1rem;
+    margin-bottom: 0rem;
+  }
+
+  &[data-state="warning"]{
+    background: $red;
+    color: white;
+    border-color: $red;
+  }
+}
+/* Trinity
+--------------------------------------------------------*/
+$square-size: 2.1rem;
+.trinity{
+  [class*="col"]:nth-child(1),
+  [class*="col"]:nth-child(2),
+  [class*="col"]:nth-child(3){
+      h2{
+        line-height: 1.2em;
+        &:before{
+          @include single-element();
+          @include square($square-size);
+          margin-left: -$square-size*1.5;
+          float: left;
+          border: 2px solid $color-theme;
+          border-radius: 100%;
+          text-align: center;
+          content:attr(data-number);
+          font-size: .9em;
+          line-height: 1.4;
+          color: $color-theme;
+          background: rgba($color-theme, .1)
+        }
+        padding-left:$square-size*1.4;
+      }
+  }
+}
+
+
+/* Sections (col-md-12)
+-------------------------------------------------------*/
+.col-md-12{
+  margin-bottom: 0em;
+  padding-top: .8em;
+  @include border-not(2px, solid, $color-theme, top);
+
+  &[data-state="warning"]{
+      @include border-not(2px, solid, $red, top);
+  }
+
+}
+/* Footer
+------------------------------------------------------*/
+footer{
+  height: auto;
+  width: 100%;
+  background: $color-theme;
+  padding:.6em 0;
+  float: left;
+
+  p{
+    float: none;
+    display: block;
+    width: 80%;
+    margin: auto;
+    color: $white;
+    @include selected-family();
+
+    a{
+      color: $light-blue;
+      text-shadow: 0 1px 0 rgba(0,0,0, .1);
+    }
+  }
+}
+
+/* Live demo
+--------------------------------------------------------------*/
+#hiddenDemo{
+  h4{
+    position: absolute;
+    color:#fff;
+    bottom:1em;
+    left: 1em;
+    text-align: center;
+    display: none;
+    &.display{
+      display: block;
+    }
+  }
+  img{
+    @include transition(opacity .3s ease);
+    position: absolute;
+    max-height: 600px;
+    z-index: -1;
+    max-width: 800px;
+    padding:1em;
+    top: 1em;
+    left:1em;
+
+    opacity: 0;
+
+     &.display{
+      opacity: 1;
+      z-index: 10;
+    }
+  }
+}
+
+
+
+/* Media queries
+--------------------------------------------------------------*/
+@media all and(max-width: 980px) {
+  .navbar-brand{
+    text-align: center;
+    width: calc(100% - 57px);
+    font-size: 1.2em;
+  }
+  .nav-pills{
+
+    background: lighten($color-theme, 5%);
+
+    @include transition(height .3s ease);
+    height: 0;
+    overflow: hidden;
+
+    width: calc(100% + 32px);
+    margin-left: -18px;
+
+    &.open{
+      height: auto;
+      overflow: visible;
+    }
+    >li{
+    width: 100%;
+    text-align: center;
+
+      .dropdown-toggle{
+      width: 100%;
+      }
+      .dropdown-menu{
+       width: 100%;
+      }
+    }
+  }
+
+  .first{
+    border: none !important;
+    float: left
+  }
+  .container.trinity{
+    width: 100%;
+    float: left;
+    margin-left: 0;
+  }
+  .col-md-12, .page-header{
+   width: calc(100% + 30px);
+   margin-left: -15px;
+   border-radius:  0;
+    > *{
+      margin: 0;
+    }
+  }
+  .page-header{
+    h1,h2,h3{line-height: 2;padding-bottom: 0;margin-bottom: 0;}
+  }
+
+  .col-md-12{
+    border: 0 !important;
+  }
+}

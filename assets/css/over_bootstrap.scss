@@ -1,0 +1,44 @@
+.dropdown-menu{
+  margin-top: 0;
+  @include border-top-radius(0px);
+  background: darken($color-theme, 15%);
+  >li>a{
+    padding: 10px 20px;
+  }
+  >li>a:hover,
+  >li>a:focus {
+    background-color: $color-theme;
+  }
+}
+
+/* pre code
+----------------------------------------------------------------------*/
+pre, code{
+  padding: 2px 4px;
+  font-size: 90%;
+  color: white;
+  background-color: lighten($color-theme, 20%);
+  border: 2px solid darken($color-theme, 5%);
+  white-space: nowrap;
+  border-radius: 4px;
+  text-shadow: 0 1px 0 rgba(black, .4);
+}
+
+
+pre code{
+  border: none;
+}
+
+/* Labels
+---------------------------------------*/
+small{
+
+  &.label{
+    box-shadow:inset 0 0 0 1px darken($color-theme, 10%);
+    background: rgba($color-theme, 1);
+
+    top: -.5em;
+    position: relative;
+  }
+
+}
